@@ -34,7 +34,7 @@ Como administrador:
   Nombre
   Boton Guardar o Cancelar
   
-  #Album:
+  **Album:**
   Titulo
   Boton Guardar o Cancelar
  
