@@ -1,0 +1,61 @@
+SUPERQUERY (Busqueda de canciones)
+Select ar.Name as Artist, b.title as Album_Name, tr.name as Track_name, tr.composer as composer, cast(tr.milliseconds as float)/60000 as duration, ge.name as genre
+from Artist ar
+INNER JOIN Album b ON ar.ArtistId = b.ArtistId
+INNER JOIN Track tr ON b.AlbumId = tr.AlbumId
+INNER JOIN Genre ge ON ge.GenreId = tr.GenreId
+WHERE ge.Name = 'Pop'
+Or ar.Name = 'Amy Winehouse'
+Or b.title = 'For Those About To Rock We Salute You'
+Or tr.name = 'C.O.D.';
+
+Obtener generos con mas canciones
+Select ge.name, count(tr.name) as Total_Tracks
+from Genre ge
+Inner Join Track tr on ge.GenreId = tr.GenreId
+GROUP BY ge.name
+Order by Total_Tracks Desc
+Limit 10;
+
+Obtener Artistas con mas albumes
+Select ar.Name, count(b.Title) as Total_Tracks
+from Artist ar
+INNER JOIN Album b ON ar.ArtistId = b.ArtistId
+GROUP BY ar.name
+Order by Total_Tracks Desc
+Limit 10;
+
+Obtner canciones con mayor duracion (Con info del artista)
+Select ar.name as Artist, tr.name as Track_name, cast(tr.milliseconds as float)/60000 as duration
+from Artist ar
+INNER JOIN Album b ON ar.ArtistId = b.ArtistId
+INNER JOIN Track tr ON b.AlbumId = tr.AlbumId
+Order by duration Desc
+Limit 10;
+
+Obtener el promedio de duracion de canciones por  genero
+Select ge.name, avg(tr.milliseconds)/60000 as AvgTime
+from Genre ge
+Inner Join Track tr on ge.GenreId = tr.GenreId
+GROUP BY ge.name
+Order by AvgTime Desc;
+
+Verificacion si un admin esta ingresando
+Select * FROM Employee
+Where EmployeeId = 1
+AND FirstName = 'Andrew'
+AND pass = '123456'
+
+Verificacion si un user esta ingresando:
+Select * FROM Customer
+Where EmployeeId = 1
+AND FirstName = 'Luís'
+AND pass = '123456'
+
+Obtner los permisos de un user:
+Select pe.PermisosId from customer cus
+inner join Roles ro on ro.RolID = cus.RolID
+inner join AsignacionPermisos ap on ap.RolID = ro.RolID
+inner join Permisos pe on pe.PermisosId = ap.PermisosId
+Where cus.CustomerId = 1
+AND cus.FirstName = 'Luís'
