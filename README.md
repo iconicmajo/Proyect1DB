@@ -1,11 +1,11 @@
 # Proyect1DB
 Proyecto que tiene  como fin crear una plataforma de música dónde existan roles, se puedan subir canciones, buscar por título, artistas, album, etc. 
 
-#Pantalla de Login
+# Pantalla de Login
 Esta debera permitir al usuario ingresar su usuario y contraseña. 
 Habrán 2 botones uno de login y otro de signup, por si no tiene usuario registrado.
 
-#SingUp
+# SingUp
 Este será un formulario donde el usuario creara su usuario ingresando datos como:
 id (autogenrado)
 nobmre*
