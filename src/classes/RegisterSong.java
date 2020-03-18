@@ -1,3 +1,5 @@
+package classes;
+
 public class RegisterSong{
 
     String name;
@@ -10,7 +12,7 @@ public class RegisterSong{
     float unitPrice;
 
 
-    public RegisterSong(String name, String album, String mediaType, Stringn genre, String composer, String duration, String unitPrice){
+    public RegisterSong(String name, String album, String mediaType, String genre, String composer, float duration, float unitPrice){
         this.name = name;
         this.album = album;
         this.mediaType = mediaType;

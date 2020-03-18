@@ -1,3 +1,5 @@
+package classes;
+
 public class Login{
 
     private String userName;
@@ -32,7 +34,7 @@ public class Login{
       * @return True or false wheter a user is admin or not
       */
      private boolean isAdministrator(String userName, int id){
-        String administrator = "QUERY"
+        String administrator = "QUERY";
          //TODO: userName split into id and name
          //Query
          return true;
@@ -54,19 +56,19 @@ public class Login{
       * Is in charge of Loging in the user
       */
      public void doLogIn(){
-        String userName_ID= this.userName.split("_");
+        String[] userName_ID= this.userName.split("_");
         String userName = userName_ID[0];
-        int id = userName_ID[1];
+        int id = Integer.parseInt(userName_ID[1]);
 
-         String isAdministrator = isAdministrator(userName, id);
+         boolean isAdministrator = isAdministrator(userName, id);
          if(isAdministrator){
             startSession();
             //TODO: ENTER WITH ADMINISTRATOR PRIVILEGES
          }
 
-         String isUser = isUser(userName, id);
+         boolean isUser = isUser(userName, id);
          if(isUser){
-             getUserPermissions(id, userName)
+             getUserPermissions(id, userName);
          }else{
              //TODO: Return bad credentials message 
          }
@@ -83,7 +85,6 @@ public class Login{
 
      /**
       * Starts up a new session as Admin
-      * @param isAdministrator
       */
      private void startSession(){
          //TODO START SESSION IF IS A ADMIN

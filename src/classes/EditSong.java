@@ -1,4 +1,6 @@
-public class EditSong(){
+package classes;
+
+public class EditSong{
 
     String name;
     float duration;

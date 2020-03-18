@@ -1,4 +1,6 @@
-import jdk.internal.joptsimple.HelpFormatter;
+package classes;
+
+
 
 public class SignUp{
 
@@ -20,7 +22,7 @@ public class SignUp{
 
 
     public SignUp(int customerID, int postalCode, int fax, int phone, String firstName, String lastName
-    , String address, String city, String state, String country, String email, Stringn pass){
+    , String address, String city, String state, String country, String email, String pass){
 
         this.customerID = customerID;
         this.postalCode = postalCode;
