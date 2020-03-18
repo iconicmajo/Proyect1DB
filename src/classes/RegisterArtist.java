@@ -1,7 +1,7 @@
 package classes;
 
 public class RegisterArtist{
-    String artistName;
+    private String artistName;
 
     public RegisterArtist(String artistName){
         this.artistName = artistName;

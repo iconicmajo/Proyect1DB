@@ -2,8 +2,8 @@ package classes;
 
 public class EditAlbum{
 
-    String title;
-    String artist;
+    private String title;
+    private String artist;
 
     public EditAlbum(String title, String artist){
         this.title = title;

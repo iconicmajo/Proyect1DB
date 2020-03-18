@@ -2,14 +2,14 @@ package classes;
 
 public class RegisterSong{
 
-    String name;
-    String album;
-    String mediaType;
-    String genre;
-    String composer;
+    private String name;
+    private String album;
+    private String mediaType;
+    private String genre;
+    private String composer;
 
-    float duration;
-    float unitPrice;
+    private float duration;
+    private float unitPrice;
 
 
     public RegisterSong(String name, String album, String mediaType, String genre, String composer, float duration, float unitPrice){

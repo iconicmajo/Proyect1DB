@@ -4,20 +4,20 @@ package classes;
 
 public class SignUp{
 
-    int customerID;
-    int postalCode;
-    int fax;
-    int phone;
+    private int customerID;
+    private int postalCode;
+    private int fax;
+    private int phone;
 
-    String firstName;
-    String lastName;
-    String company;
-    String address;
-    String city;
-    String state;
-    String country;
-    String email;
-    String pass;
+    private String firstName;
+    private String lastName;
+    private String company;
+    private String address;
+    private String city;
+    private String state;
+    private String country;
+    private String email;
+    private String pass;
 
 
 
